@@ -512,15 +512,17 @@ h5 {
 #registration_desc h6 {
     font-size: 36px;
     font-weight: normal;
+    padding-top: 60px;
 }
 
 #registration_desc h6,
 #registration_desc p {
-    margin: 70px;
+    margin: 10px;
+    margin-top: 40px;
 }
 
 #registration_desc p {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     margin-bottom: 0px;
 }
 
@@ -565,7 +567,7 @@ h5 {
 }
 
 .more_details {
-
+    padding: 5px;
     text-align: center;
 }
 
@@ -643,12 +645,6 @@ h4 {
 
 }
 
-#registration .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 
 
