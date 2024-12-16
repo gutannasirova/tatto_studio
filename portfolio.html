@@ -12,19 +12,39 @@
     <section id="registration">
         <div class="container">
             <header>
-                <a href="index.html">
-                    <img src="./images/logo.png" alt="logotip">
-                </a>
-                <nav>
+                <div class="burger">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="logotip">
+                    </div>
+                    <div class="mobile-nav">
+                        <button class="burger-menu" onclick="toggleMenu()">☰</button>
+                        <ul class="mobile-menu" id="mobileMenu">
+                            <li><a href="index.html#our_services">Услуги</a></li>
+                            <li><a href="index.html#our_masters">Команда</a></li>
+                            <li><a href="index.html#reviews">Отзывы</a></li>
+                            <li><a href="index.html#contacts">Контакты</a></li>
+                            <li><a href="index.htmlportfolio.html">Портфолио</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="desktop-nav">
                     <ul>
                         <li class="menu"><a href="index.html#our_services">Услуги</a></li>
                         <li class="menu"><a href="index.html#our_masters">Команда</a></li>
                         <li class="menu"><a href="index.html#reviews">Отзывы</a></li>
                         <li class="menu"><a href="index.html#contacts">Контакты</a></li>
-                        <li class="menu"><a href="index.html#portfolio.html">Портфолио</a></li>
+                        <li class="menu"><a href="portfolio.html#portfolio">Портфолио</a></li>
                     </ul>
                 </nav>
+
             </header>
+            <script>
+                function toggleMenu() {
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.toggle('active');
+                }
+            </script>
         </div>
     </section>
 
@@ -34,8 +54,8 @@
 
             <!-- Портфолио 1 -->
             <div class="portfolio_1">
-                <div class="title_block"  id = "portfolio_maria">
-                    <h4>Мария Петрова</h4> <!-- Заголовок между картинками -->
+                <div class="title_block" id="portfolio_maria">
+                    <h4>Мария Петрова</h4>
                 </div>
                 <div class="portfolio-container">
                     <button class="nav-button" id="prevButton1">◀</button>
@@ -53,8 +73,8 @@
 
             <!-- Портфолио 2 -->
             <div class="portfolio_1">
-                <div class="title_block"  id = "portfolio_katerina">
-                    <h4>Катерина Иванова</h4> <!-- Заголовок между картинками -->
+                <div class="title_block" id="portfolio_katerina">
+                    <h4>Катерина Иванова</h4>
                 </div>
                 <div class="portfolio-container">
                     <button class="nav-button" id="prevButton2">◀</button>
@@ -72,8 +92,8 @@
 
             <!-- Портфолио 3 -->
             <div class="portfolio_1">
-                <div class="title_block" id = "portfolio_sofia">
-                    <h4>София Кузнецова</h4> <!-- Заголовок между картинками -->
+                <div class="title_block" id="portfolio_sofia">
+                    <h4>София Кузнецова</h4>
                 </div>
                 <div class="portfolio-container">
                     <button class="nav-button" id="prevButton3">◀</button>

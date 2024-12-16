@@ -22,9 +22,13 @@ body {
     margin: 0 auto;
 }
 
+.burger {
+    z-index: 1000;
+}
+
 li {
     list-style: none;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 a {
@@ -52,16 +56,34 @@ header {
     display: flex;
     align-items: center;
     justify-content: left;
-    position: absolute;
-    margin-left: 30px;
 }
+
 
 .detail_img {
-    float: left;
+    position: absolute;
 }
 
-.cover {
-    height: 65vh;
+
+
+
+.coverDescription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+
+}
+
+.text-content {
+    text-align: center;
+}
+
+
+.desktop_cover_image img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
 }
 
 p {
@@ -80,14 +102,7 @@ h3 {
     font-weight: normal;
 }
 
-.coverDescription {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    margin-top: 150px;
-    text-align: center;
-}
+
 
 h1,
 h2,
@@ -96,13 +111,7 @@ p {
     padding: 5 5px;
 }
 
-.cover_image img {
-    max-width: 100%;
-}
 
-.text-content {
-    margin-right: 80px;
-}
 
 .button {
     display: inline-block;
@@ -127,14 +136,13 @@ p {
 /* НАШИ УСЛУГИ */
 
 #our_services {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 #our_services .services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
 }
 
 #our_services .services img {
@@ -293,8 +301,6 @@ h5 {
 
 #work {
     margin-top: 50px;
-    background-image: url('./images/work.fon.png');
-    background-size: cover;
     background-position: center;
     width: 100%;
     height: 700px;
@@ -303,15 +309,16 @@ h5 {
 }
 
 .work_cont {
+    padding: 60px 150px;
+    border-radius: 50px;
+    background-color: #e5d2ba;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-
 
 }
 
 .work-content {
+    
     flex: 1;
     position: relative;
 }
@@ -377,7 +384,8 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px;
+    width: 100%;
+
 }
 
 .review {
@@ -390,12 +398,17 @@ h5 {
     align-items: center;
     text-align: center;
     margin: 0 10px;
+
 }
 
 .review-content {
     display: flex;
     flex-direction: column;
     align-items: start;
+}
+
+#reviews {
+    width: 100%;
 }
 
 .review-content img {
@@ -458,11 +471,14 @@ h5 {
     margin: 0;
 }
 
-.footer {
+footer {
     background-color: #333;
+    margin-top: 20px;
+    background-color: rgba(248, 244, 233, 1);
 }
 
 .footer_desc {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -473,10 +489,6 @@ h5 {
     height: 20px;
 }
 
-#footer {
-    margin-top: 20px;
-    background-color: rgba(248, 244, 233, 1);
-}
 
 
 
@@ -488,8 +500,8 @@ h5 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
     max-width: 1140px;
+
 
 }
 
@@ -515,10 +527,14 @@ h5 {
     padding-top: 60px;
 }
 
+#registration {
+    width: 100%;
+}
+
+
 #registration_desc h6,
 #registration_desc p {
     margin: 10px;
-    margin-top: 40px;
 }
 
 #registration_desc p {
@@ -531,6 +547,7 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .registration_form input,
@@ -563,7 +580,6 @@ h5 {
 
 .registration_form button:hover {
     background-color: #ebccc3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .more_details {
@@ -587,18 +603,7 @@ h4 {
     margin-top: 30px;
 }
 
-.price_button a {
-    width: 200px;
-    height: 50px;
-    background-color: #F8F4EC;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    font-size: 16px;
-    color: #000000;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
 
-}
 
 .price_button a:hover {
     background-color: #ebccc3;
@@ -625,13 +630,6 @@ h4 {
 
 
 
-
-
-#registration {
-    margin-top: 40px;
-
-}
-
 #registration header {
     background-color: #F8F4EC;
     border-radius: 30px;
@@ -647,12 +645,12 @@ h4 {
 
 
 
-
 #portfolio {
     display: flex;
     justify-content: space-between;
     text-align: center;
     margin-top: 50px;
+    width: 100%;
 
 }
 
@@ -725,4 +723,543 @@ h4 {
 
 .feedback-section {
     margin-top: 60px;
+}
+
+
+
+
+
+
+/* Медиа-запросы для адаптивности */
+
+@media (max-width: 430px) {
+
+
+    .container {
+        max-width: 430px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+
+    #our_services {
+        margin-top: 500px;
+    }
+
+    .detail_img img {
+        max-width: 65%;
+    }
+
+
+    .coverDescription {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+    }
+
+
+    h1,
+    h2,
+    p {
+        margin: 0px;
+    }
+
+
+    .logo img {
+        max-width: 70%;
+
+    }
+
+    .text-content {
+        margin-right: 0;
+    }
+
+
+
+    /* НАШИ УСЛУГИ */
+
+
+    #our_services .services img {
+        max-width: 70%;
+        height: auto;
+
+    }
+
+    #our_services {
+        margin-top: 0px;
+    }
+
+    .divider1 {
+        width: 80%;
+    }
+
+
+    .service-item img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .button {
+        width: 150px;
+        height: 45px;
+        font-size: 14px;
+        color: #000000;
+        background-color: #f8f4ec00;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 10px;
+    }
+
+
+    p {
+        font-size: 16px;
+    }
+
+    /* НАШИ МАСТЕРА */
+
+    .master_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .masters img {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .master-image1 {
+        margin-right: 0;
+    }
+
+    .master-info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+
+
+    .master_2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .masters .button {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 10px;
+
+    }
+
+    .detail_img {
+        display: none;
+    }
+
+
+
+    .price_button a {
+        width: 180px;
+        height: 45px;
+        background-color: #F8F4EC;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #000000;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+
+    }
+
+
+    /* НАШИ ПРИНЦИПЫ РАБОТЫ */
+    
+     #work {
+        height: auto; 
+        border-radius: 40px; 
+    }
+
+    .work_cont {
+        padding: 10px 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-content {
+        padding: 10px; 
+    }
+
+    
+    .dropdown-button {
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .dropdown-content {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+
+    .button-text {
+        font-size: 16px;
+    }
+
+    .divider {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+
+    /* ОТЗЫВЫ */
+
+    .review {
+        padding: 10px;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #999696;
+        border-radius: 20px;
+    }
+
+    #prevButton {
+        left: 5px;
+    }
+
+    #nextButton {
+        right: 5px;
+    }
+
+    /* Контакты */
+
+    .contacts_all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contacts_description {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .contact_item {
+        margin-bottom: 15px;
+    }
+
+
+    .master-image1,
+    .master-image2 {
+        order: -1;
+    }
+
+    .master-image2 {
+        margin-left: 0px;
+    }
+
+    .contact_item img {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .contact_item p {
+        font-size: 16px;
+    }
+
+    /* Карта */
+
+    .contacts_all iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+
+    /* Бургер-меню */
+
+    /* Основные стили */
+    .desktop-nav {
+        display: none;
+    }
+
+    .desktop_cover_image {
+        max-width: 50%;
+        margin-top: 20px;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .burger-menu {
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu li {
+        margin: 10px 0;
+    }
+
+
+    /* Десктопная версия */
+    @media (min-width: 431px) {
+        .mobile-nav {
+            display: none;
+        }
+
+        .desktop-nav {
+            display: flex;
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+
+    /* Стили для header */
+    header {
+        background-color: #F8F4EC;
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+
+
+    #registration_desc {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    #registration_desc h6 {
+        margin-top: 0px;
+    }
+
+    .row {
+        margin-bottom: 0px;
+    }
+
+    .registration_form input,
+    .registration_form select {
+        max-width: 100%;
+    }
+
+    .registration_form button {
+        width: 100%;
+    }
+
+    .desktop-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .desktop-nav li {
+        margin-left: 20px;
+    }
+
+    /* Для мобильного меню */
+    .mobile-nav {
+        position: relative;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        right: 0;
+    }
+
+
+    .detail_img {
+        display: none;
+    }
+
+
+    .mobile-menu {
+        background: #b18765;
+        border: 1px solid #000000;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .mobile-menu a {
+        color: #000000;
+        font-size: 16px;
+    }
+
+
+
+
+    .more_details h6,
+    .more_details h4 {
+        margin: 0;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .price_button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .more_details .container img {
+        margin-top: 30px;
+    }
+
+
+
+
+    .more p,
+    h4 {
+        text-align: center;
+    }
+
+
+    #portfolio {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        margin: 0px;
+    }
+
+
+    .price_button p {
+        margin-left: 20px;
+        font-size: 28px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+
+    .portfolio img {
+        padding: 0 20px;
+        max-width: 80%;
+        height: auto;
+    }
+
+
+    .more_details .container img {
+        max-width: 60%;
+        height: auto;
+    }
+
+
+    .desktop_img_more {
+        display: none;
+    }
+
+    .feedback-form input,
+    .feedback-form input,
+    .feedback-form textarea {
+        width: 350px;
+        height: 70px;
+    }
+
+    .feedback-form button {
+        padding: 15px 30px;
+    }
+
+
+    .text p {
+        margin-top: 10px;
+    }
+
+
+    .footer_desc {
+        width: 100%;
+        background-color: #333;
+        margin-top: 20px;
+        background-color: rgba(248, 244, 233, 1);
+    }
+}
+
+
+
+
+
+/* Десктопная версия */
+@media (min-width: 431px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: flex;
+    }
+
+    .mobile_img_more {
+        display: none;
+    }
+
 }

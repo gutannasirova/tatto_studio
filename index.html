@@ -16,8 +16,23 @@
         </div>
         <div class="container">
             <header>
-                <img src="./images/logo.png" alt="logotip">
-                <nav>
+                <div class="burger">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="logotip">
+                    </div>
+                    <div class="mobile-nav">
+                        <button class="burger-menu" onclick="toggleMenu()">☰</button>
+                        <ul class="mobile-menu" id="mobileMenu">
+                            <li><a href="#our_services">Услуги</a></li>
+                            <li><a href="#our_masters">Команда</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
+                            <li><a href="portfolio.html">Портфолио</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="desktop-nav">
                     <ul>
                         <li class="menu"><a href="#our_services">Услуги</a></li>
                         <li class="menu"><a href="#our_masters">Команда</a></li>
@@ -26,7 +41,15 @@
                         <li class="menu"><a href="portfolio.html">Портфолио</a></li>
                     </ul>
                 </nav>
+
             </header>
+
+            <script>
+                function toggleMenu() {
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.toggle('active');
+                }
+            </script>
 
             <div class="cover">
                 <div class="coverDescription">
@@ -37,7 +60,7 @@
                             сегодня!</p>
                         <a href="registration.html" class="button">Записаться</a>
                     </div>
-                    <div class="cover_image">
+                    <div class="desktop_cover_image">
                         <img src="./images/foto1.png" alt="cover_foto">
                     </div>
                 </div>
@@ -265,33 +288,64 @@
     </section>
 
     <script>
-        let currentReviewPair = 0; 
-        const reviews = document.querySelectorAll('.review'); 
-        const reviewsPerPage = 2; 
+        let currentReview = 0; // Для одного отзыва на мобильных устройствах
+        let currentReviewPair = 0; // Для двух отзывов на десктопах
+        const reviews = document.querySelectorAll('.review');
+        const reviewsPerPageMobile = 1; // Один отзыв на мобильных устройствах
+        const reviewsPerPageDesktop = 2; // Два отзыва на десктопах
 
         function updateReviews() {
+            const isMobile = window.innerWidth <= 430; // Проверяем ширину экрана
+            const reviewsPerPage = isMobile ? reviewsPerPageMobile : reviewsPerPageDesktop;
+
             reviews.forEach((review, index) => {
-                if (index >= currentReviewPair * reviewsPerPage && index < (currentReviewPair + 1) * reviewsPerPage) {
-                    review.style.display = 'block';
+                if (isMobile) {
+                    // Для мобильных устройств
+                    if (index === currentReview) {
+                        review.style.display = 'block';
+                    } else {
+                        review.style.display = 'none';
+                    }
                 } else {
-                    review.style.display = 'none';
+                    // Для десктопов
+                    if (index >= currentReviewPair * reviewsPerPage && index < (currentReviewPair + 1) * reviewsPerPage) {
+                        review.style.display = 'block';
+                    } else {
+                        review.style.display = 'none';
+                    }
                 }
             });
         }
 
         document.getElementById('prevButton').addEventListener('click', () => {
-            if (currentReviewPair > 0) {
-                currentReviewPair--;
-                updateReviews();
+            const isMobile = window.innerWidth <= 430;
+            if (isMobile) {
+                if (currentReview > 0) {
+                    currentReview--;
+                }
+            } else {
+                if (currentReviewPair > 0) {
+                    currentReviewPair--;
+                }
             }
+            updateReviews();
         });
 
         document.getElementById('nextButton').addEventListener('click', () => {
-            if (currentReviewPair < Math.ceil(reviews.length / reviewsPerPage) - 1) {
-                currentReviewPair++;
-                updateReviews();
+            const isMobile = window.innerWidth <= 430;
+            if (isMobile) {
+                if (currentReview < reviews.length - 1) {
+                    currentReview++;
+                }
+            } else {
+                if (currentReviewPair < Math.ceil(reviews.length / reviewsPerPageDesktop) - 1) {
+                    currentReviewPair++;
+                }
             }
+            updateReviews();
         });
+
+        window.addEventListener('resize', updateReviews);
 
         updateReviews();
     </script>
@@ -305,10 +359,10 @@
 
                 <div style="position:relative;overflow:hidden;"><a
                         href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a
                         href="https://yandex.ru/maps/213/moscow/house/planernaya_ulitsa_12/Z04YcgRnS0IGQFtvfXR3cXlgYA==/?ll=37.437340%2C55.860565&utm_medium=mapframe&utm_source=maps&z=18.15"
-                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Планерная улица, 12 —
-                        Яндекс Карты</a><iframe
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                    </a><iframe
                         src="https://yandex.ru/map-widget/v1/?ll=37.437340%2C55.860565&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc4ODU4MBI90KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCf0LvQsNC90LXRgNC90LDRjyDRg9C70LjRhtCwLCAxMiIKDcS_FUIVMHFfQg%2C%2C&z=18.15"
                         width="560" height="400" frameborder="1" allowfullscreen="true"
                         style="position:relative;"></iframe>
