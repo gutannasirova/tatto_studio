@@ -10,6 +10,16 @@ html {
     box-sizing: inherit;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.0s ease, transform 1.5s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 body {
     margin: 0;
     padding: 0;
@@ -318,7 +328,7 @@ h5 {
 }
 
 .work-content {
-    
+
     flex: 1;
     position: relative;
 }
@@ -379,32 +389,41 @@ h5 {
 }
 
 
-
+/* Отзывы */
 .reviews-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 
 .review {
     background-color: rgba(253, 253, 241, 0.358);
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 350px;
     padding: 40px;
     border: 1px solid #999696;
     border-radius: 50px;
     align-items: center;
     text-align: center;
     margin: 0 10px;
+    display: none;
+}
 
+.review-content h6 {
+    font-size: 24px;
+    margin: 10px 0px;
+    font-weight: normal;
+}
+
+.review.active {
+    display: block;
 }
 
 .review-content {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    text-align: center;
 }
 
 #reviews {
@@ -433,17 +452,15 @@ h5 {
 .leave-review-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
-
-
 
 .button:hover {
     background-color: #b38855;
 }
 
-
 .contacts_all {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -897,10 +914,10 @@ h4 {
 
 
     /* НАШИ ПРИНЦИПЫ РАБОТЫ */
-    
-     #work {
-        height: auto; 
-        border-radius: 40px; 
+
+    #work {
+        height: auto;
+        border-radius: 40px;
     }
 
     .work_cont {
@@ -910,10 +927,10 @@ h4 {
     }
 
     .work-content {
-        padding: 10px; 
+        padding: 10px;
     }
 
-    
+
     .dropdown-button {
         border-radius: 20px;
         width: 40px;
@@ -943,21 +960,34 @@ h4 {
 
     /* ОТЗЫВЫ */
 
+
+
     .review {
-        padding: 10px;
-        width: 300px;
-        height: 200px;
-        border: 1px solid #999696;
-        border-radius: 20px;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 30px;
     }
 
-    #prevButton {
-        left: 5px;
+    .review-content img {
+        width: 30px;
     }
 
-    #nextButton {
-        right: 5px;
+    .reviews-container .nav-button {
+        margin: 10px 10px;
+        padding: 10px 15px;
+        border-radius: 30px;
     }
+
+    .leave-review-container {
+        margin-top: 10px;
+    }
+
+    .button {
+        width: 40%;
+        font-size: 16px;
+    }
+
 
     /* Контакты */
 
@@ -1071,35 +1101,51 @@ h4 {
     }
 
     /* Стили для header */
+    .container {
+        padding: 0 20px; /* Уменьшаем отступы на мобильных устройствах */
+    }
     header {
+        width: 100%;
         background-color: #F8F4EC;
         border-radius: 30px;
         border: 1px solid black;
     }
 
+    .registration_form input,
+    .registration_form select {
+        width: 300px;
+        height: 50px;
+    }
 
+
+    .registration_form button {
+        width: 150px;
+        height: 50px;
+        background-color: #F8F4EC;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #000000;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+    }
+
+    
     #registration_desc {
         text-align: center;
-        padding: 20px;
         width: 100%;
     }
 
     #registration_desc h6 {
         margin-top: 0px;
+
     }
 
     .row {
         margin-bottom: 0px;
     }
 
-    .registration_form input,
-    .registration_form select {
-        max-width: 100%;
-    }
 
-    .registration_form button {
-        width: 100%;
-    }
 
     .desktop-nav ul {
         display: flex;
@@ -1203,11 +1249,14 @@ h4 {
 
 
     .portfolio img {
-        padding: 0 20px;
-        max-width: 80%;
-        height: auto;
+        width: 80%;
+        margin: 5px 0;
     }
 
+    #portfolio .nav-button {
+        padding: 10px 15px;
+        border-radius: 30px;
+    }
 
     .more_details .container img {
         max-width: 60%;

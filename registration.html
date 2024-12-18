@@ -50,35 +50,41 @@
     </section>
 
     <section id="registration_desc">
-        <div class="registration_desc">
-            <h6>Запись на сеанс</h6>
-            <p>Мы всегда рады приветствовать Вас в нашей студии!<br> Оставьте заявку и мы ответим Вам в ближайшее время.
-            </p>
-        </div>
-
-        <div class="registration_all">
-            <div class="registration_form">
-                <input type="text" id="name" placeholder="Ваше имя" required>
-                <input type="tel" id="phone" placeholder="Ваш номер телефона" required>
-                <select id="master" required>
-                    <option value="" disabled selected>Выберите мастера</option>
-                    <option value="marina">Марина Петрова</option>
-                    <option value="katerina">Катерина Иванова</option>
-                    <option value="sofia">София Кузнецова</option>
-                </select>
-                <select id="service" required>
-                    <option value="" disabled selected>Выберите услугу</option>
-                    <option value="tattoo">Нанесение татуировки</option>
-                    <option value="piercing">Пирсинг</option>
-                    <option value="removal">Снятие татуировки</option>
-                    <option value="correction">Коррекция татуировки</option>
-                    <option value="consultation">Консультация</option>
-                    <option value="sketch">Разработка эскизов</option>
-                </select>
-                <button type="submit" onclick="submitForm()">Отправить</button>
-                <div id="successMessage" class="success-message" style="display: none;">Заявка успешно отправлена!</div>
+        <div class="container">
+            <div class="registration_desc">
+                <h6>Запись на сеанс</h6>
+                <p>Мы всегда рады приветствовать Вас в нашей студии!<br> Оставьте заявку и мы ответим Вам в ближайшее
+                    время.
+                </p>
             </div>
+
+            <div class="registration_all">
+                <div class="registration_form">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="tel" id="phone" placeholder="Ваш номер телефона" required>
+                    <select id="master" required>
+                        <option value="" disabled selected>Выберите мастера</option>
+                        <option value="marina">Марина Петрова</option>
+                        <option value="katerina">Катерина Иванова</option>
+                        <option value="sofia">София Кузнецова</option>
+                    </select>
+                    <select id="service" required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="tattoo">Нанесение татуировки</option>
+                        <option value="piercing">Пирсинг</option>
+                        <option value="removal">Снятие татуировки</option>
+                        <option value="correction">Коррекция татуировки</option>
+                        <option value="consultation">Консультация</option>
+                        <option value="sketch">Разработка эскизов</option>
+                    </select>
+                    <button type="submit" onclick="submitForm()">Отправить</button>
+                    <div id="successMessage" class="success-message" style="display: none;">Заявка успешно отправлена!
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    
     <script>
         function submitForm() {
             // Получаем значения полей ввода

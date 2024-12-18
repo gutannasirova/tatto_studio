@@ -68,24 +68,26 @@
         </div>
     </section>
 
+    
+
     <section id="our_services">
         <div class="container">
             <div class="services">
                 <h3>Наши услуги</h3>
                 <div class="row">
-                    <div class="service-item">
+                    <div class="service-item fade-in">
                         <img src="./images/about_1.png" alt="">
                         <hr class="divider1">
                         <p>Пирсинг</p>
                         <a href="more_detail4.html" class="button">Подробнее</a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item fade-in">
                         <img src="./images/about_2.png" alt="">
                         <hr class="divider1">
                         <p>Снятие татуировки</p>
                         <a href="more_detail2.html" class="button">Подробнее</a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item fade-in">
                         <img src="./images/about_3.png" alt="">
                         <hr class="divider1">
                         <p>Нанесение татуировки</p>
@@ -93,19 +95,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="service-item">
+                    <div class="service-item fade-in">
                         <img src="./images/about_1.png" alt="">
                         <hr class="divider1">
                         <p>Консультация</p>
                         <a href="more_details.html" class="button">Подробнее</a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item fade-in">
                         <img src="./images/about_2.png" alt="">
                         <hr class="divider1">
                         <p>Коррекция татуировки</p>
                         <a href="more_detail5.html" class="button">Подробнее</a>
                     </div>
-                    <div class="service-item">
+                    <div class="service-item fade-in">
                         <img src="./images/about_3.png" alt="">
                         <hr class="divider1">
                         <p>Разработка эскизов</p>
@@ -115,12 +117,12 @@
             </div>
         </div>
     </section>
-
+    
     <section id="our_masters">
         <div class="container">
             <h3>Наши мастера</h3>
             <div class="masters">
-                <div class="master_1">
+                <div class="master_1 fade-in">
                     <img src="./images/masters.png" alt="master1" class="master-image1">
                     <div class="master-info">
                         <h4>Марина Петрова</h4>
@@ -133,7 +135,7 @@
                         <a href="portfolio.html#portfolio_maria" class="button">Портфолио</a>
                     </div>
                 </div>
-                <div class="master_2">
+                <div class="master_2 fade-in">
                     <div class="master-info">
                         <h4>Катерина Иванова</h4>
                         <h5>Тату-мастер</h5>
@@ -147,7 +149,7 @@
                     </div>
                     <img src="./images/masters.png" alt="master1" class="master-image2">
                 </div>
-                <div class="master_1">
+                <div class="master_1 fade-in">
                     <img src="./images/masters.png" alt="master1" class="master-image1">
                     <div class="master-info">
                         <h4>София Кузнецова</h4>
@@ -240,123 +242,101 @@
 
 
     <section id="reviews">
-        <h3>Отзывы</h3>
+        <div class="container">
+            <h3>Отзывы</h3>
 
-        <div class="reviews-container">
-            <button class="nav-button" id="prevButton">◀</button>
+            <div class="reviews-container">
 
-            <div class="review" id="review1">
-                <div class="review-content">
-                    <img src="./images/Quote Left.png" alt="">
-                    <p>Уже второй раз делаю татуировку в этом салоне, и каждый раз остаюсь в восторге! Мастера
-                        профессионалы, атмосфера дружелюбная, а результат просто шикарный. Рекомендую всем!</p>
+                <button class="nav-button" id="prevButton">◀</button>
+
+                <div class="review" id="review1">
+                    <div class="review-content">
+                        <img src="./images/Quote Left.png" alt="">
+                        <h6>Ева Смирнова</h6>
+                        <p>Уже второй раз делаю татуировку в этом салоне, и каждый раз остаюсь в восторге! Мастера
+                            профессионалы, атмосфера дружелюбная, а результат просто шикарный. Рекомендую всем!</p>
+                    </div>
                 </div>
+
+                <div class="review" id="review2" style="display: none;">
+                    <div class="review-content">
+                        <img src="./images/Quote Left.png" alt="">
+                        <h6>Ксения Ваниловна</h6>
+                        <p>Сделала пирсинг уха и осталась очень довольна! Мастер был внимателен и аккуратен, всё
+                            объяснил и
+                            помог выбрать украшение. Обязательно вернусь за новой татуировкой!</p>
+                    </div>
+                </div>
+
+                <div class="review" id="review3" style="display: none;">
+                    <div class="review-content">
+                        <img src="./images/Quote Left.png" alt="">
+                        <h6>Анастасия Кузнецова</h6>
+                        <p>Тату-салон с отличной репутацией! Здесь работают настоящие художники. Я пришёл с идеей, и они
+                            помогли её реализовать на высшем уровне. Очень рекомендую!</p>
+                    </div>
+                </div>
+
+                <div class="review" id="review4" style="display: none;">
+                    <div class="review-content">
+                        <img src="./images/Quote Left.png" alt="">
+                        <h6>Дарья Соколова</h6>
+                        <p>Пирсинг в этом салоне — это не просто процедура, а целый ритуал! Внимательное отношение и
+                            профессионализм мастеров сделали мой опыт комфортным и приятным. Спасибо за классный
+                            результат!
+                        </p>
+                    </div>
+                </div>
+                <button class="nav-button" id="nextButton">▶</button>
             </div>
 
-            <div class="review" id="review2" style="display: none;">
-                <div class="review-content">
-                    <img src="./images/Quote Left.png" alt="">
-                    <p>Сделала пирсинг уха и осталась очень довольна! Мастер был внимателен и аккуратен, всё объяснил и
-                        помог выбрать украшение. Обязательно вернусь за новой татуировкой!</p>
-                </div>
+            <div class="leave-review-container">
+                <a href="reviews_2.html" class="button">Оставить отзыв</a>
             </div>
-
-            <div class="review" id="review3" style="display: none;">
-                <div class="review-content">
-                    <img src="./images/Quote Left.png" alt="">
-                    <p>Тату-салон с отличной репутацией! Здесь работают настоящие художники. Я пришёл с идеей, и они
-                        помогли
-                        её реализовать на высшем уровне. Очень рекомендую!</p>
-                </div>
-            </div>
-
-            <div class="review" id="review4" style="display: none;">
-                <div class="review-content">
-                    <img src="./images/Quote Left.png" alt="">
-                    <p>Пирсинг в этом салоне — это не просто процедура, а целый ритуал! Внимательное отношение и
-                        профессионализм мастеров сделали мой опыт комфортным и приятным. Спасибо за классный результат!
-                    </p>
-                </div>
-            </div>
-
-            <button class="nav-button" id="nextButton">▶</button>
-        </div>
-
-        <div class="leave-review-container">
-            <a href="reviews_2.html" class="button">Оставить отзыв</a>
         </div>
     </section>
 
+
+
     <script>
-        let currentReview = 0; // Для одного отзыва на мобильных устройствах
-        let currentReviewPair = 0; // Для двух отзывов на десктопах
+        let currentReview = 0;
         const reviews = document.querySelectorAll('.review');
-        const reviewsPerPageMobile = 1; // Один отзыв на мобильных устройствах
-        const reviewsPerPageDesktop = 2; // Два отзыва на десктопах
 
         function updateReviews() {
-            const isMobile = window.innerWidth <= 430; // Проверяем ширину экрана
-            const reviewsPerPage = isMobile ? reviewsPerPageMobile : reviewsPerPageDesktop;
-
-            reviews.forEach((review, index) => {
-                if (isMobile) {
-                    // Для мобильных устройств
-                    if (index === currentReview) {
-                        review.style.display = 'block';
-                    } else {
-                        review.style.display = 'none';
-                    }
-                } else {
-                    // Для десктопов
-                    if (index >= currentReviewPair * reviewsPerPage && index < (currentReviewPair + 1) * reviewsPerPage) {
-                        review.style.display = 'block';
-                    } else {
-                        review.style.display = 'none';
-                    }
-                }
+            // Скрываем все отзывы
+            reviews.forEach(review => {
+                review.style.display = 'none';
             });
+
+            // Показываем текущий отзыв
+            reviews[currentReview].style.display = 'block';
         }
 
         document.getElementById('prevButton').addEventListener('click', () => {
-            const isMobile = window.innerWidth <= 430;
-            if (isMobile) {
-                if (currentReview > 0) {
-                    currentReview--;
-                }
-            } else {
-                if (currentReviewPair > 0) {
-                    currentReviewPair--;
-                }
+            if (currentReview > 0) {
+                currentReview--;
+                updateReviews();
             }
-            updateReviews();
         });
 
         document.getElementById('nextButton').addEventListener('click', () => {
-            const isMobile = window.innerWidth <= 430;
-            if (isMobile) {
-                if (currentReview < reviews.length - 1) {
-                    currentReview++;
-                }
-            } else {
-                if (currentReviewPair < Math.ceil(reviews.length / reviewsPerPageDesktop) - 1) {
-                    currentReviewPair++;
-                }
+            if (currentReview < reviews.length - 1) {
+                currentReview++;
+                updateReviews();
             }
-            updateReviews();
         });
 
-        window.addEventListener('resize', updateReviews);
-
+        // Инициализация: показываем первый отзыв
         updateReviews();
     </script>
-    </section>
+
 
 
     <section id="contacts">
-        <h3>Контакты</h3>
+
         <div class="container">
             <div class="contacts_all">
-
+                <h3>Контакты</h3>
                 <div style="position:relative;overflow:hidden;"><a
                         href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
                         style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a
@@ -408,9 +388,32 @@
         </footer>
     </section>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll('.fade-in');
+    
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+    
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('resize', checkFade);
+    
+        // Инициализация
+        checkFade();
+    });
 
-
-
+</script>
+    
 </body>
 
 </html>
